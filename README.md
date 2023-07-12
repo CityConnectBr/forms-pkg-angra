@@ -14,7 +14,7 @@ This package aims to provide APIs for developing dynamic forms.
 
 ### You will need do add this routes to yout api.php :
 
-![Red text]: If the routes below are not working, go to /vendor/city/connect/dynamic/forms/routes/api.php to access the most current routes 
+! If the routes below are not working, go to /vendor/city/connect/dynamic/forms/routes/api.php to access the most current routes 
 
 ```sh
 
