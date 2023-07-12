@@ -33,7 +33,7 @@ class CompletedFormController extends Controller
         return new CompletedFormResource($form);
     }
 
-    public function create(CompletedFormRequest $request)
+    public function store(CompletedFormRequest $request)
     {
         try {
 

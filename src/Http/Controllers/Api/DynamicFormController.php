@@ -29,7 +29,7 @@ class DynamicFormController extends Controller
     }
 
    
-    public function create(DynamicFormRequest $request)
+    public function store(DynamicFormRequest $request)
     {
         try {
             $data = $request->validated();

@@ -29,7 +29,7 @@ class FieldController extends Controller
         return FieldResource::collection($fields);
     }
 
-    public function create(FieldRequest $request)
+    public function store(FieldRequest $request)
     {
         try {
 
@@ -55,7 +55,7 @@ class FieldController extends Controller
         return new FieldResource($field);
     }
 
-    public function delete(int $id)
+    public function destroy(int $id)
     {
         $field = Field::findOrFail($id);
 
