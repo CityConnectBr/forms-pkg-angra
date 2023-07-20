@@ -6,6 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
+
 class CompletedFormRequest extends FormRequest
 {
     /**
@@ -33,7 +34,7 @@ class CompletedFormRequest extends FormRequest
 
             foreach($this->get('answers') as $key => $val){
                 $rules['answers.'.$key.'.id'] = 'required';
-                $rules['answers.'.$key.'.field_id'] = 'required';
+                $rules['answers.'.$key.'.field_id'] = 'required|exists:fields,id';
                 $rules['answers.'.$key.'.answare'] = 'required|array';
             }
 
@@ -41,15 +42,14 @@ class CompletedFormRequest extends FormRequest
         }
         
         $rules =  [
-            'dynamic_form_id' => 'required',
+            'dynamic_form_id' => 'required|exists:dynamic_forms,id',
             'user_id' => 'required',
             'expires_in' => 'required',
             'answers' => 'required|array',
         ];
 
         foreach($this->get('answers') as $key => $val){
-            $rules['answers.'.$key.'.id'] = 'required';
-            $rules['answers.'.$key.'.field_id'] = 'required';
+            $rules['answers.'.$key.'.field_id'] = 'required|exists:fields,id';
             $rules['answers.'.$key.'.answare'] = 'required|array';
         }
 

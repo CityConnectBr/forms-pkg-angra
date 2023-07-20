@@ -25,8 +25,7 @@ class FieldRequest extends FormRequest
      */
     public function rules()
     {
-        if($this->method() == 'PUT' || $this->method() == 'PATCH')
-        {
+        if ($this->method() == 'PUT' || $this->method() == 'PATCH') {
             return [
                 'form_id' => 'required',
                 'label' => 'required|min:3|max:255',
@@ -37,21 +36,19 @@ class FieldRequest extends FormRequest
                 'options' => 'nullable',
             ];
         }
-        
+
         $rules =  [
-            'form_id' =>'required',
+            'form_id' => 'required',
             'fields' => 'required|array',
         ];
 
-        foreach($this->get('fields') as $key => $val){
-            $rules['fields.'.$key.'.form_id'] = 'required';
-            $rules['fields.'.$key.'.label'] = 'required|min:3|max:255';
-            $rules['fields.'.$key.'.type'] = 'required|min:3|max:255';
-            $rules['fields.'.$key.'.class'] = 'required|min:3|max:255';
-            $rules['fields.'.$key.'.is_required'] = 'required|boolean';
-            $rules['fields.'.$key.'.is_multiple'] = 'required|boolean'; 
-            $rules['fields.'.$key.'.options'] = 'nullable'; 
-
+        foreach ($this->get('fields') as $key => $val) {
+            $rules['fields.' . $key . '.label'] = 'required|min:3|max:255';
+            $rules['fields.' . $key . '.type'] = 'required|min:3|max:255';
+            $rules['fields.' . $key . '.class'] = 'required|min:3|max:255';
+            $rules['fields.' . $key . '.is_required'] = 'required|boolean';
+            $rules['fields.' . $key . '.is_multiple'] = 'required|boolean';
+            $rules['fields.' . $key . '.options'] = 'nullable';
         }
         return $rules;
     }
