@@ -15,10 +15,6 @@ This package aims to provide APIs for developing dynamic forms.
 ### You will need do add this routes to yout api.php :
 
 ```diff
-! If the routes below are not working, go to /vendor/city/connect/dynamic/forms/routes/api.php to access the most current routes 
-
-```sh
-
 use Mayrajp\Forms\Http\Controllers\Api\CompletedFormController;
 use Mayrajp\Forms\Http\Controllers\Api\DynamicFormController;
 use Mayrajp\Forms\Http\Controllers\Api\FieldController;
