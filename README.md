@@ -6,7 +6,7 @@ This package aims to provide APIs for developing dynamic forms.
 
 ### Run the package
 
-`composer require city/connect/dynamic/forms`
+`composer require natan/dynamic-forms`
 
 ### Run the migrations 
 
