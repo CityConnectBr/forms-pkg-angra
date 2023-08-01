@@ -1,5 +1,5 @@
 {
-    "name": "natan/dynamic/forms",
+    "name": "natan/dynamic-forms",
     "autoload": {
         "classmap": [
             "database"
