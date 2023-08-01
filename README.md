@@ -10,7 +10,7 @@ This package aims to provide APIs for developing dynamic forms.
 
 ### Run the migrations 
 
-`php artisan migrate --path=/vendor/city/connect/dynamic/forms/database/migrations`
+`php artisan migrate --path=/vendor/natan/dynamic/forms/database/migrations`
 
 ### You will need do add this routes to yout api.php :
 
