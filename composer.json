@@ -1,5 +1,5 @@
 {
-    "name": "city/connect/dynamic/forms",
+    "name": "natan/dynamic/forms",
     "autoload": {
         "classmap": [
             "database"
